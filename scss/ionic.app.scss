@@ -1,0 +1,214 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+//@import "../www/lib/ionic/scss";
+.icon-sp {
+	color: $assertive;
+	font-size : 2.5em;
+	font-weight : bold;
+	 text-shadow: 0px 1px 0px rgba(255,255,255,0.3), -2px 3px 1px rgba(0,0,0,0.3);
+	 transition: all 0.3s ease-out;
+}
+.icon-sp-text {
+	font-weight : bold;
+	text-shadow: -1px 3px 0px rgba(255,255,255,0.9);
+}
+
+body.platform-ios {
+	font-family: Montserrat, sans-serif;
+}
+
+.ionic-body.platform-ios {
+	font-family: Montserrat, sans-serif;
+}
+
+body.platform-android {
+	font-family: Roboto, sans-serif;
+}
+
+.ionic-body.platform-android {
+	font-family: Roboto, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
+	font-family: inherit;
+}
+
+.item-avatar  {     
+	width:100% !important;  
+	height : 100% !important;  
+	max-width: 100px !important;  //any size
+	max-height: 100px !important; //any size 
+}
+.ion-ios-contact:before {
+    font-size: 4em;
+    color: gray;
+}
+.ion-profil-bg{
+  background-color: #f8f8f8;
+}
+.input-label{
+	font-weight:bold;
+}
+.item{
+	margin:0px;
+}
+
+i.icon.ion-android-walk:before{
+  margin-left: 15px!important;
+
+}
+i.icon.ion-quote:before{
+  padding-right : 10px;
+  font-size:2em;
+  color: gray;
+}
+// Avatar
+
+ion-avatar,
+ion-thumbnail {
+  display: block;
+  }
+  ion-avatar img,
+  ion-thumbnail img {
+    display: block; }
+
+    ion-avatar[item-left],
+ion-thumbnail[item-left] {
+  margin: 0px 16px 0px 8px; }
+
+ion-avatar[item-right],
+ion-thumbnail[item-right] {
+  margin: 8px; }
+
+.item-button {
+  padding: 0 .5em;
+  height: 24px;
+  font-size: 1.3rem; }
+
+.item-button.button-icon-only ion-icon,
+.item-button.button-icon-only {
+  padding: 0 1px; }
+
+ion-avatar {
+  min-width: 3.0rem;
+   }
+  ion-avatar img {
+    max-width: 4.0rem;
+    max-height: 4.0rem;
+    border-radius: 1.9rem; }
+
+ion-thumbnail {
+  min-width: 5.6rem;
+  min-height: 5.6rem; }
+  ion-thumbnail img {
+    max-width: 5.6rem;
+    max-height: 5.6rem; }
+
+
+// Card 
+
+.card{
+	margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+ion-card {
+  display: block;
+  overflow: hidden; }
+
+ion-card img {
+  display: block;
+  width: 100%; }
+
+ion-card-header {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+ion-card-content {
+  display: block; }
+
+ion-card {
+  margin: 0px 12px 8px 12px;
+  width: calc(100% - 24px);
+  border-radius: 2px;
+  font-size: 1.4rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+  ion-card ion-list {
+    margin-bottom: 0; }
+    ion-card ion-list .item {
+      padding-right: 0; }
+    ion-card ion-list ion-label {
+      padding: 0; }
+  ion-card > .item:last-child,
+  ion-card > ion-item-sliding:last-child .item {
+    border-bottom: 0; }
+  ion-card .item-inner {
+    border: 0; }
+  ion-card ion-card-content {
+    padding: 13px 16px 14px 16px;
+    font-size: 1.4rem;
+    line-height: 1.4; }
+  ion-card ion-card-header {
+    padding: 16px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333; }
+  ion-card ion-card-header + ion-card-content,
+  ion-card .item + ion-card-content {
+    padding-top: 0; }
+  ion-card ion-note[item-left],
+  ion-card ion-note[item-right] {
+    font-size: 1.3rem; }
+  ion-card ion-card-title {
+    display: block;
+    margin: 2px 0 2px;
+    padding: 8px 0 8px 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #222; }
+  ion-card h1 {
+    margin: 0 0 2px;
+    font-size: 2.4rem;
+    font-weight: normal; }
+  ion-card h2 {
+    margin: 2px 0;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  ion-card h3,
+  ion-card h4,
+  ion-card h5,
+  ion-card h6 {
+    margin: 2px 0;
+    font-size: 1.4rem;
+    font-weight: normal; }
+  ion-card p {
+    margin: 0 0 2px;
+    font-size: 1.4rem;
+    color: #666; }
+
+ion-card + ion-card {
+  margin-top: 0; }

@@ -1,0 +1,176 @@
+<ion-view title="Edit Profile" id="page7" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div id="editProfile-button-bar1" class=" button-bar ">
+            <button id="editProfile-button3"  class=" button button-positive button-outline icon icon-left ion-close-round " ng-click="cancel()">Cancel</button>
+            <button id="editProfile-button5" class=" button button-positive button-outline icon icon-left ion-checkmark-round"  ng-click="submitprofile()">Save</button>
+        </div>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <div class="card row" style="margin-right:0px; background-color:#f8f8f8">
+            <div class="col-25" >
+              <ion-avatar item-left>
+                 <i class="icon ion-contact ion-ios-contact" style="font-size:1.7em" ng-click="choosePhoto()" ng-show="imgURI == ''"></i>
+                  <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}"  ng-click="choosePhoto()" />
+              </ion-avatar>
+            </div>
+            <div class="col">
+            <h3 style="margin-left:15px;">{{user.name}}</h3>
+            <p style="margin-left:15px;">{{user.identity}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <ion-item class="item-divider " id="myPage-list-item-divider1">Profile</ion-item>    
+            <form id="profile" ng-submit="submitprofile()">
+                 <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input " id="sname">
+                            <span class="input-label">Name</span>
+                            
+                        </label>
+                    </div>
+                     <div class="col">
+                        <div class="row" style="padding-left:15px;">
+                        <input type="text" placeholder="Screen Name" style="width:100%;" maxlength=100 ng-model="user.name">
+                    </div>
+                    </div>
+                </div>
+                 <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input " id="sname">
+                            <span class="input-label">Identity</span>
+                            
+                        </label>
+                    </div>
+                     <div class="col">
+                        <div class="row" style="padding-left:15px;">
+                        <input type="text" placeholder="Choose to walk in the Sprit." style="width:100%;" ng-model="user.identity">
+                    </div>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input " style="padding-top:15px;"  id="gender">
+                        <span class="input-label">Gender</span>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                         <span style=" padding: 11px;">Male</span>
+                        <label class="checkbox checkbox-calm">
+                           <input type="radio" ng-modal = "gender" value="M" name="gender-chk" ng-model="user.gender">
+                        </label>
+                        <span style=" padding: 11px;">Female</span>
+                     <label class="checkbox checkbox-royal">
+                           <input type="radio" ng-modal = "gender" value="F" name="gender-chk" ng-model="user.gender">
+                           </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input "   id="editProfile-dob">
+                        <span class="input-label">Birth Month</span>
+                        </label> 
+                    </div>
+                    <div class="col">
+                        <div class="row" style="padding-left:15px;">
+                        <input type="month" placeholder="Month and year of Birth" ng-model="user.dob"></input>
+                    </div>
+                    </div>
+                
+                </div>
+                <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input " id="email">
+                            <span class="input-label">Email</span>
+                          
+                        </label>
+                    </div>
+                     <div class="col">
+                        <div class="row" style="padding-left:15px;">
+                        <input type="email" name="email" placeholder="email" maxlength=100 ng-model="user.email">
+                        
+                    </div>
+                    </div>
+                </div>
+                 <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input " id="email">
+                            <span class="input-label">city</span>
+                          
+                        </label>
+                    </div>
+                     <div class="col">
+                        <div class="row" style="padding-left:15px;">
+                        <input type="text" name="city" placeholder="City" maxlength=100 ng-model="user.city">
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col-25">
+                        <label class=" item-input "  style="padding-top:15px;" id="level">
+                            <span class="input-label">Level</span>
+                            
+                        </label>
+                    </div>
+                     <div class="col">
+                        <div class="row">
+                         
+                         <span style="padding-top: 11px; padding-left:8px;">S</span>
+                        <label class="checkbox checkbox-calm">
+                           <input type="radio" ng-modal = "level" value="1" name="level-chk" ng-model="user.level">
+                        </label>
+                         <span style=" padding-top: 11px; padding-left:8px;">M</span>
+                        <label class="checkbox checkbox-balanced">
+                           <input type="radio" ng-modal = "level" value="2" name="level-chk" ng-model="user.level">
+                        </label>
+                         <span style=" padding-top: 11px; padding-left:8px;">L</span>
+                        <label class="checkbox checkbox-positive">
+                           <input type="radio" ng-modal = "level" value="3" name="level-chk" ng-model="user.level">
+                        </label>
+                         <span style=" padding-top: 11px; padding-left:8px;">XL</span>
+                        <label class="checkbox checkbox-assertive">
+                           <input type="radio" ng-modal = "level" value="4" name="level-chk" ng-model="user.level">
+                        </label>
+                        </div>
+                    </div>
+                </div>
+                <ion-item class="item-divider " id="myPage-list-item-divider2">Notifications</ion-item> 
+                <div class="row item">
+                    <div class="col" style="padding-left:0px;">
+                        <label class=" item-input "  id="eventnotification">
+                        <span class="input-label">Live Event Notification</span>
+                        </label>
+                    </div>
+                    <div class="col">
+                     <label class="toggle" style="margin-top:4px;">
+                         <input type="checkbox" id="event_notification" ng-model="user.event_notification" ng-true-value="'Y'"
+                    ng-false-value="'N'" >
+                         <div class="track">
+                             <div class="handle"></div>
+                         </div>
+                     </label>
+                    
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col" style="padding-left:0px;">
+                        <label class=" item-input "  id="editProfile-input8">
+                            <span class="input-label">Push Notification</span>
+                        </label>
+                    </div>
+                    <div class="col" style="padding-left:50px">
+                       <label class="toggle" style="margin-top:4px;">
+                           <input type="checkbox" id="push_notification" ng-model="user.push_notification" ng-true-value="'Y'"
+                    ng-false-value="'N'">
+                           <div class="track">
+                               <div class="handle"></div>
+                           </div>
+                       </label>
+                   </div>
+                </div>
+                
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

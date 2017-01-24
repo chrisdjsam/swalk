@@ -1,0 +1,15 @@
+{
+  "name": "SWalk",
+  "app_id": "",
+  "gulpStartupTasks": ["sass", "watch"],
+  "proxies": [
+    {
+      "path": "/signup",
+      "proxyUrl": "http://localhost/signup.php"
+    },
+    {
+      "path": "/info",
+      "proxyUrl": "http://localhost/info.php"
+    }
+  ]
+}

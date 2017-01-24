@@ -1,0 +1,55 @@
+<ion-view title="Today" id="page2" class="">
+    <ion-content padding="true" class="has-header">
+        <div class="card row" style="margin-right:0px; background-color:#f8f8f8">
+            <div class="col-33" >
+              <ion-avatar item-left>
+                 <i class="icon ion-contact ion-ios-contact" style="font-size:1.6rem" ng-click="choosePhoto()" ng-show="imgURI == ''"></i>
+                  <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}"  ng-click="choosePhoto()" />
+              </ion-avatar>
+            </div>
+            <div class="col-77">
+            <h3>{{user.name}}</h3>
+            <p>{{user.identity}}</p>
+            </div>
+        </div>
+      
+     
+        <div class="card">
+            <div class="item item-divider">
+                Today SWalk Chart
+            </div>
+            <div class="item item-text-wrap">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                    chart-data="data" chart-labels="labels" />
+               
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="item item-divider">
+                 Worship Time
+            </p>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <i style="font-size:4em; color:#e0e0de" class="icon ion-bonfire">
+                        <div style="position:relative; top:-5px; color:rgba(0, 0, 0, 0.9); font-size:.17em; padding:4px; z-index:1">11:59 AM</div>
+                    </i>
+                    
+                </div>
+                <div class="col">
+                     <i class="icon ion-quote"> 
+                        God almight! Worship you! 
+                        Jehova Jiara My provider I worship you.
+                    </i>
+                </div>
+            </div>
+            <div class="button-bar button-full">
+               <a class="button"><i style="color:#efb8b8" class="icon ion-thumbsup"></i></a>
+               <a class="button "></a>
+               <a class="button"><i style="color:#efb8b8" class="icon ion-android-walk"></i></a>
+            </div>
+           
+    </div>
+    </ion-content>
+</ion-view>
